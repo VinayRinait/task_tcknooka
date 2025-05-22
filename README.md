@@ -1,54 +1,141 @@
-# React + TypeScript + Vite
+# Admission Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive web application for managing university admissions, built with React, TypeScript, and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📊 **Analytics Dashboard**
+  - Real-time admission statistics
+  - Application trends visualization
+  - Program-wise application distribution
+  - Comparison with previous periods
 
-## Expanding the ESLint configuration
+- 👥 **Applicant Management**
+  - Comprehensive applicant list with pagination
+  - Advanced search and filtering
+  - Status management (Pending, Verified, Rejected)
+  - Sortable columns
+  - Responsive table design
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- 📱 **Responsive Design**
+  - Mobile-first approach
+  - Adaptive layouts for all screen sizes
+  - Collapsible sidebar for mobile devices
+  - Touch-friendly interface
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- 🔔 **Notification System**
+  - Real-time notifications
+  - Notice board
+  - Upcoming events calendar
+
+## Tech Stack
+
+- **Frontend Framework:** React with TypeScript
+- **Styling:** Tailwind CSS
+- **Charts:** Recharts
+- **Icons:** Heroicons
+- **Routing:** React Router
+- **Build Tool:** Vite
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/admission-portal.git
+   cd admission-portal
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+## Deployment
+
+### Deploying to Vercel
+
+1. Install Vercel CLI (optional):
+   ```bash
+   npm install -g vercel
+   ```
+
+2. Deploy using one of these methods:
+
+   **Method 1: Using Vercel Dashboard (Recommended)**
+   1. Push your code to GitHub
+   2. Go to [Vercel Dashboard](https://vercel.com/dashboard)
+   3. Click "New Project"
+   4. Import your GitHub repository
+   5. Configure project settings:
+      - Framework Preset: Vite
+      - Build Command: `npm run build`
+      - Output Directory: `dist`
+   6. Click "Deploy"
+
+   **Method 2: Using Vercel CLI**
+   ```bash
+   vercel
+   ```
+
+3. Environment Variables (if needed):
+   - Add any required environment variables in the Vercel dashboard
+   - Project Settings > Environment Variables
+
+4. Automatic Deployments:
+   - Vercel automatically deploys when you push to your main branch
+   - Preview deployments are created for pull requests
+
+## Project Structure
+
+```
+src/
+├── components/         # React components
+├── data/              # Mock data and types
+├── services/          # API services
+└── App.tsx           # Main application component
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Available Scripts
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run type-check` - Run TypeScript compiler check
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Recharts](https://recharts.org/)
+- [Heroicons](https://heroicons.com/)
